@@ -5,9 +5,20 @@ print("Bem vindo ao jogo e advinhação!")
 print("*******************************")
 
 numero_secreto = random.randrange(1,101)
-total_de_tentativas = 3
+total_de_tentativas = 0
+pontos = 1000
 
-print(numero_secreto)
+print("Qual o nível de dificuldade?")
+print("(1)-Fácil(2)-Médio(3)-Difícil)")
+
+nivel = int(input("Escolha um nível de dificuldade: "))
+
+if(nivel == 1):
+      total_de_tentativas = 20
+elif(nivel == 2):
+      total_de_tentativas = 10
+else:
+      total_de_tentativas = 5
 
 for rodada in range(1, total_de_tentativas + 1):
     print("Tentativa {} de {}". format(rodada, total_de_tentativas))
@@ -31,7 +42,10 @@ for rodada in range(1, total_de_tentativas + 1):
             print("Você errou! O seu chute foi acima do valor secreto.")
         if(menor):
             print("Você errou! O seu chute foi abaixo do valor secreto.")
+        pontos_perdidos = abs(numero_secreto - chute)
+        pontos = pontos - pontos_perdidos
+        print("Você perdeu {} pontos". format(pontos_perdidos))
 
-print("Fim do Jogo :(")
+print("Você marcou {} pontos. Fim do Jogo :3". format(pontos))
 
 
