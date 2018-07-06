@@ -5,8 +5,12 @@ def jogar(): #como definir uma função no python
     print("*******************************")
 
     palavra_secreta = "pedante"
+    letras_acertadas = ["_","_","_","_","_","_","_"]
+
     enforcou = False
     acertou = False
+
+    print(letras_acertadas)
 
     while(not enforcou and not acertou):
 
@@ -18,8 +22,9 @@ def jogar(): #como definir uma função no python
         index = 0
         for letra in palavra_secreta:
             if(chute.upper() == letra.upper()): #método que deixa tudo em caps
-                print("Encontrei a letra {} na posicão {}". format(letra, index))
+                letras_acertadas[index] = letra
             index = index + 1
+        print(letras_acertadas)
 
     print("Fim de jogo!")
 
