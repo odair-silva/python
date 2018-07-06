@@ -50,4 +50,7 @@ def jogar():
 
     print("Você marcou {} pontos. Fim do Jogo :3". format(pontos))
 
-
+#esse if faz com que o python saiba se está sendo importado em outro arquivo ou se está rodando
+#de um prompt
+if(__name__ == "__main__"):
+    jogar()
