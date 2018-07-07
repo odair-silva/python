@@ -40,7 +40,7 @@ def jogar(): #como definir uma função no python
 
 def imprime_msg_abertura():
     print("*******************************")
-    print("Bem vindo ao jogo e advinhação!")
+    print("Bem vindo ao jogo de forca!")
     print("*******************************")
 
 def carrega_palavra_secreta():
